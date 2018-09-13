@@ -28,28 +28,23 @@ var app = {
 app.initialize();
 
 window.onload = function(){
-  console.log("Version 0.0.1 ")
-  var data = document.getElementById('data')
+  console.log("Version 0.0.2 ")
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
   var service = document.getElementById('service').value
   var action = document.getElementById('action').value
   var argument = document.getElementById('argument').value
+  var log = document.getElementById('log')
 
   var send_data = ""
   var send_func = function(str, call_back){
     cordova.exec(call_back, function(err){
-      console.log(err) 
+      log.innerHTML = JSON.Stringify(err)
     }, service, action, argument) 
   }
 
   btn.onclick = function(){
-    try{
-      send_data = JSON.parse(data.value) 
-    }catch(e){
-      console.log(e)  
-    }
     send_func(send_data, function(winParam){
       resp.innerHTML = JSON.parse(winParam) 
     })
