@@ -43,7 +43,7 @@ window.onload = function(){
   var send_func = function(str, call_back){
     cordova.exec(call_back, function(err){
       alert(err);
-      //log.innerHTML = err
+      log.innerHTML = err
     }, "HSBApi", "abc", ["cde", "fgh", "jki"]) 
   }
 
@@ -53,6 +53,6 @@ window.onload = function(){
       alert(winParam)
     })
   }
-  /*
+ */ 
 
 }
