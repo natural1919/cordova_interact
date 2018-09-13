@@ -10,6 +10,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        cordova.exec(function(){}, function(){}, "HSBApi", "abc", [1,2,3,4,5])
     },
 
     // Update DOM on a Received Event
@@ -29,6 +30,7 @@ app.initialize();
 
 window.onload = function(){
   console.log("Version 0.0.7")
+  /*
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
@@ -51,5 +53,6 @@ window.onload = function(){
       alert(winParam)
     })
   }
+  /*
 
 }
