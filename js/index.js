@@ -1,4 +1,3 @@
-var to_str_func = JSON.Stringify;
 var ready = function(){
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
@@ -20,13 +19,16 @@ var ready = function(){
   btn.onclick = function(){
     send_func(argument, function(winParam){
       try{
-        resp.innerHTML = to_str_func(winParam)
+        resp.innerHTML = parse_str(winParam)
       }catch(e){
         alert(e); 
       }
     })
   }
 
+}
+var parse_str = function(arg){
+  return JSON.stringify(arg)
 }
 
 var app = {
