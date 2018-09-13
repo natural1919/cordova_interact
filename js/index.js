@@ -28,7 +28,7 @@ var app = {
 app.initialize();
 
 window.onload = function(){
-  console.log("Version 0.0.4")
+  console.log("Version 0.0.5")
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
@@ -40,8 +40,9 @@ window.onload = function(){
   var send_data = ""
   var send_func = function(str, call_back){
     cordova.exec(call_back, function(err){
-      log.innerHTML = JSON.Stringify(err)
-    }, service, action, argument) 
+      alert(err);
+      //log.innerHTML = err
+    }, "HSBApi", "abc", "cde") 
   }
 
   btn.onclick = function(){
