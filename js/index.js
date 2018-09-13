@@ -1,33 +1,3 @@
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-        ready()
-    },
-
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-app.initialize();
-
 var ready = function(){
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
@@ -58,3 +28,34 @@ var ready = function(){
   }
 
 }
+
+var app = {
+    // Application Constructor
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+    },
+
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        ready()
+        console.log('Received Event: ' + id);
+    }
+};
+
+app.initialize();
+
