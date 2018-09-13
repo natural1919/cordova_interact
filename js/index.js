@@ -28,7 +28,7 @@ var app = {
 app.initialize();
 
 window.onload = function(){
-  console.log("Version 0.0.5")
+  console.log("Version 0.0.6")
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
