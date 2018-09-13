@@ -19,7 +19,7 @@ var ready = function(){
   btn.onclick = function(){
     send_func(argument, function(winParam){
       try{
-        resp.innerHTML = JSON.parse(winParam)
+        resp.innerHTML = JSON.Stringify(winParam)
       }catch(e){
         alert(e); 
       }
