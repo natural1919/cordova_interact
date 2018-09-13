@@ -1,3 +1,4 @@
+var to_str_func = JSON.Stringify;
 var ready = function(){
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
@@ -19,11 +20,10 @@ var ready = function(){
   btn.onclick = function(){
     send_func(argument, function(winParam){
       try{
-        resp.innerHTML = JSON.Stringify(winParam)
+        resp.innerHTML = to_str_func(winParam)
       }catch(e){
         alert(e); 
       }
-      alert(winParam)
     })
   }
 
