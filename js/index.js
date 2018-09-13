@@ -43,7 +43,7 @@ var ready = function(){
     }
     cordova.exec(call_back, function(err){
       alert(err);
-    }, service, action, data) 
+    }, service, action, [data]) 
   }
 
   btn.onclick = function(){
