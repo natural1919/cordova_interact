@@ -10,7 +10,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        cordova.exec(function(){}, function(){}, "HSBApi", "abc", [1,2,3,4,5]);
+        ready()
     },
 
     // Update DOM on a Received Event
@@ -28,30 +28,33 @@ var app = {
 
 app.initialize();
 
-/*
-window.onload = function(){
+var ready = function(){
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
   var service = document.getElementById('service').value
   var action = document.getElementById('action').value
   var argument = document.getElementById('argument').value
-  var log = document.getElementById('log')
 
-  var send_data = ""
   var send_func = function(str, call_back){
+    var data = { first: 1, second: "2" };
+    if(str !== ""){
+      data = str;
+    }
     cordova.exec(call_back, function(err){
       alert(err);
-      //log.innerHTML = err
-    }, "HSBApi", "abc", ["cde", "fgh", "jki"]) 
+    }, service, action, data) 
   }
 
   btn.onclick = function(){
-    send_func(send_data, function(winParam){
-      //resp.innerHTML = JSON.parse(winParam) 
+    send_func(argument, function(winParam){
+      try{
+        resp.innerHTML = JSON.parse(winParam)
+      }catch(e){
+        alert(e); 
+      }
       alert(winParam)
     })
   }
 
 }
-*/ 
