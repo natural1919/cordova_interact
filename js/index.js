@@ -28,7 +28,7 @@ var app = {
 app.initialize();
 
 window.onload = function(){
-  console.log("Version 0.0.6")
+  console.log("Version 0.0.7")
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
@@ -47,7 +47,8 @@ window.onload = function(){
 
   btn.onclick = function(){
     send_func(send_data, function(winParam){
-      resp.innerHTML = JSON.parse(winParam) 
+      //resp.innerHTML = JSON.parse(winParam) 
+      alert(winParam)
     })
   }
 
