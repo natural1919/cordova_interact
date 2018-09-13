@@ -10,7 +10,7 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        cordova.exec(function(){}, function(){}, "HSBApi", "abc", [1,2,3,4,5])
+        cordova.exec(function(){}, function(){}, "HSBApi", "abc", [1,2,3,4,5]);
     },
 
     // Update DOM on a Received Event
@@ -28,9 +28,8 @@ var app = {
 
 app.initialize();
 
+/*
 window.onload = function(){
-  console.log("Version 0.0.7")
-  /*
   var btn = document.getElementById('btn')
   var resp = document.getElementById('resp')
 
@@ -43,7 +42,7 @@ window.onload = function(){
   var send_func = function(str, call_back){
     cordova.exec(call_back, function(err){
       alert(err);
-      log.innerHTML = err
+      //log.innerHTML = err
     }, "HSBApi", "abc", ["cde", "fgh", "jki"]) 
   }
 
@@ -53,6 +52,6 @@ window.onload = function(){
       alert(winParam)
     })
   }
- */ 
 
 }
+*/ 
