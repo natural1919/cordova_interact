@@ -42,7 +42,7 @@ window.onload = function(){
     cordova.exec(call_back, function(err){
       alert(err);
       //log.innerHTML = err
-    }, "HSBApi", "abc", "cde") 
+    }, "HSBApi", "abc", ["cde", "fgh", "jki"]) 
   }
 
   btn.onclick = function(){
