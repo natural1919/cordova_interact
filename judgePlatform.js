@@ -40,5 +40,5 @@ window.onload = function(){
   cordova_script.src= loc + "/cordova.js"
   index_script.src= "js/index.js"
   document.body.append(cordova_script)
-  document.body.append(index_script)
+  //document.body.append(index_script)
 }
