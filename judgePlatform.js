@@ -23,10 +23,10 @@ window.onload = function(){
   var loc = "";
   var script = document.createElement("script")
   if( browser.versions.iPhone || browser.versions.iPad || browser.versions.webApp ){
-    loc = "android"; 
+    loc = "ios" 
   }
   else if( browser.versions.android ){
-    loc = "ios" 
+    loc = "android"; 
   } else {
     console.log("Browser not Supported !") 
     alert("Browser not Supported !")
