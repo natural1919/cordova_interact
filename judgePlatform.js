@@ -22,7 +22,7 @@ var browser = {
 window.onload = function(){
   var loc = "";
   var script = document.createElement("script")
-  if( browser.versions.iPhone || browser.versions.iPad || browser.version.webApp ){
+  if( browser.versions.iPhone || browser.versions.iPad || browser.versions.webApp ){
     loc = "android"; 
   }
   else if( browser.versions.android ){
