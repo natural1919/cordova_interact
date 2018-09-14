@@ -23,8 +23,11 @@ window.onload = function(){
   var bt = document.getElementById("browser_type")
   bt.innerHTML = JSON.stringify(browser.versions);
   var loc = "";
-  var script = document.createElement("script")
-  script.type="text/javascript"
+  var cordova_script = document.createElement("script")
+  var index_script = document.createElement("script")
+
+  cordova_script.type="text/javascript"
+  index_script.type="text/javascript"
   if( browser.versions.iPhone || browser.versions.iPad ){
     loc = "ios" 
   }
@@ -34,6 +37,8 @@ window.onload = function(){
     console.log("Browser not Supported !") 
     alert("Browser not Supported !")
   }
-  script.src= loc + "/cordova.js"
-  document.body.append(script)
+  cordova_script.src= loc + "/cordova.js"
+  index_script.src= "js/index.js"
+  document.body.append(cordova_script)
+  document.body.append(index_script)
 }
