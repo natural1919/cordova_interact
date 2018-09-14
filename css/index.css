@@ -84,6 +84,10 @@ h1 {
     text-align:center;
 }
 
+button{
+  cursor: pointer;
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
