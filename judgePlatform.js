@@ -20,6 +20,7 @@ var browser = {
 }
 
 window.onload = function(){
+  alert(JSON.stringify(browser.versions))
   var loc = "";
   var script = document.createElement("script")
   script.type="text/javascript"
