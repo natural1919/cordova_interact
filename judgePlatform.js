@@ -22,7 +22,8 @@ var browser = {
 window.onload = function(){
   var loc = "";
   var script = document.createElement("script")
-  if( browser.versions.iPhone || browser.versions.iPad || browser.versions.webApp ){
+  script.type="text/javascript"
+  if( browser.versions.iPhone || browser.versions.iPad ){
     loc = "ios" 
   }
   else if( browser.versions.android ){
@@ -31,7 +32,6 @@ window.onload = function(){
     console.log("Browser not Supported !") 
     alert("Browser not Supported !")
   }
-  script.type="text/javascript"
   script.src= loc + "/cordova.js"
   document.body.append(script)
 }
